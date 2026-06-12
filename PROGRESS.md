@@ -4,21 +4,19 @@
 > anything. Update it at every save point. Replace content — do not append.
 > History lives in git.
 
-**Session:** 0 — build not started
-**Last updated:** 12 June 2026 — by Project Governor, pre-build
+**Session:** 1 — first build session
+**Last updated:** 12 June 2026 — Session 1 in progress
 **Live URL:** none yet [Rule: fill in after the first successful deploy]
 
 ## Current state
-supplier_onboarding.html built and pushed to GitHub. Netlify MCP active. Repo root will contain CLAUDE.md, PROGRESS.md, product-spec.md, and the-corporate-brand skill file before session 1. docs/ not yet created.
+First Session Setup complete: docs/ created, product-spec.md moved to docs/, the-corporate-brand skill installed at .claude/skills/the-corporate-brand/SKILL.md. supplier_onboarding.html exists but does not yet conform to spec Section 8 (decision tree, lime overuse, wrong CTAs — fixes in progress).
 [Rule: this section describes what exists and works right now — never what is planned. Completed checklist items get absorbed here in compressed form.]
 
 ## Last session
-None — the first build session has not happened yet.
+Session 1 (in progress): First Session Setup, landing page spec alignment, deploy.
 [Rule: 3–5 lines maximum. Replace each session — what was built, changed, or fixed.]
 
 ## Remaining work
-- [ ] First Session Setup: create docs/, move product-spec.md, install the-corporate-brand skill, commit
-- [ ] Builder: upload the-corporate-brand skill file to the repo root before opening Claude Code
 - [ ] Verify Landing Page (supplier_onboarding.html) aligns with spec Section 8; draft "Why We Are Asking" copy and fix any gaps
 - [ ] Export arm: confirm /assets/The_Corporate_Supplier_Questionnaire_2026.xlsx is present and XLSX download works correctly
 - [ ] Confirm placeholder URLs for "View Document" and "View Policy" with builder, or leave as # with code comments
