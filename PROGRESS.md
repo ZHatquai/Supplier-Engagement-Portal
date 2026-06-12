@@ -19,7 +19,7 @@ Session 1: First Session Setup; merged builder's questionnaire upload from main 
 ## Remaining work
 - [ ] Builder review: "Why We Are Asking" body copy (drafted this session, on the page)
 - [ ] Builder: provide real URLs for "View Document" and "View Policy" (currently # with TODO comments in index.html)
-- [ ] Deploy: merge to main → Netlify auto-deploy (Netlify MCP not available in this session); verify live URL and record it above
+- [ ] Builder: confirm the Netlify live URL (merge to main pushed 12 June 2026 — auto-deploy triggered), verify the live page and XLSX download, record the URL in the status header (acceptance criterion 10)
 [Rule: completed items leave this list and are absorbed into Current state. This list only shrinks.]
 
 ## Build decisions
