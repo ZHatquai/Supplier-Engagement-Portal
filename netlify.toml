@@ -1,0 +1,25 @@
+# Netlify build configuration — The Corporate Supplier Sustainability Portal (v2.0)
+#
+# The site is a Vite single-page app. `npm run build` emits to `dist/`, which
+# Netlify publishes. The SPA redirect serves index.html for any direct hit or
+# refresh (the app is client-rendered).
+#
+# SECRETS_SCAN_OMIT_KEYS: the two VITE_ keys are intentionally public — Vite
+# inlines them into the client bundle and the anon key is JWT-shaped, so
+# Netlify's secret scanner would otherwise flag them. They are safe only
+# because Supabase RLS restricts the anon role to insert-only with no read.
+# NEVER set SECRETS_SCAN_ENABLED=false — that removes protection for a
+# genuinely leaked key. If smart detection still flags the value, safelist it
+# with SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES (set via Netlify, not here).
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "VITE_SUPABASE_URL,VITE_SUPABASE_ANON_KEY"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
